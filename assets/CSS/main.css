@@ -1,0 +1,240 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  background-color: #F6F6F6;
+}
+.main .header-logo {
+  display: flex;
+  height: 63px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.main .header-logo img {
+  width: 197px;
+  height: 36px;
+}
+.main .where {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  gap: 17px;
+  color: #353535;
+  font-weight: 500;
+  background-color: #EAEAEA;
+}
+.main .location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.main .location h1 {
+  font-size: 24px;
+  margin-top: 39px;
+  text-align: center;
+  width: 275px;
+  height: 68px;
+  font-weight: 700;
+}
+.main .location p {
+  font-size: 18px;
+  color: #353535;
+  width: 315px;
+  height: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-weight: 300;
+}
+.main .location button {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  margin-bottom: 57px;
+}
+.main .how {
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  background-color: white;
+}
+.main .how__title {
+  margin-top: 48px;
+  margin-bottom: 26px;
+}
+.main .how .step {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 25px;
+  align-items: center;
+}
+.main .how .step__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 72px;
+  width: 100%;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 12px;
+}
+.main .how .step__number {
+  background-color: #9356DC;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+}
+.main .how .step__icon {
+  color: #7E7E7E;
+}
+.main .how .step__icon--purple {
+  color: #9356DC;
+}
+.main .how .step__text {
+  font-size: 16px;
+  font-weight: 500;
+  width: 211px;
+}
+.main .restaurants {
+  display: flex;
+  flex-direction: column;
+}
+.main .restaurants h2 {
+  margin: 54px 20px 0 20px;
+}
+.main .restaurants .all-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 66px;
+}
+.main .restaurants .card {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  margin-top: 18px;
+  position: relative;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.main .restaurants .card__image {
+  height: 174px;
+  position: relative;
+}
+.main .restaurants .card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.main .restaurants .card__image .card__label {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  background-color: #99E2D0;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .restaurants .card__content {
+  height: 77px;
+  padding: 0 0 0 13px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.main .restaurants .card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main .restaurants .card__like {
+  position: absolute;
+  bottom: 33px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #101010;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px;
+}
+footer h4 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer a i {
+  width: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
