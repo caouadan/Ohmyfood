@@ -63,7 +63,7 @@ a {
   margin-bottom: 27px;
   font-weight: 300;
 }
-.main .location button {
+.main .location .btn {
   font-size: 16px;
   font-weight: 500;
   text-align: center;
@@ -73,9 +73,10 @@ a {
   background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   border-radius: 25px;
-  outline: none;
-  border: none;
   margin-bottom: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main .how {
   height: 440px;
@@ -88,12 +89,18 @@ a {
   margin-top: 48px;
   margin-bottom: 26px;
 }
+.main .how .how-to-do {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .main .how .step {
   display: flex;
   flex-direction: row;
   position: relative;
   margin-bottom: 25px;
   align-items: center;
+  width: 335px;
 }
 .main .how .step__content {
   display: flex;
