@@ -89,7 +89,26 @@ a {
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            transition: box-shadow 0.2s ease;
+        }
 
+        .btn::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: white;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            border-radius: 25px;
+        }
+
+        .btn:hover {
+            box-shadow: 0 8px 20px 0 #00000080;
+        }
+
+        .btn:hover::after {
+            opacity: 0.15;
         }
     }
 
@@ -243,6 +262,38 @@ a {
                 border: none;
                 font-size: 22px;
                 color: #101010;
+                cursor: pointer;
+
+                .fa-heart {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transition: opacity 0.5s ease;
+                }
+
+                .fa-regular {
+                    opacity: 1;
+                }
+
+                .fa-solid {
+                    opacity: 0;
+                }
+
+                &:hover .fa-solid {
+                    opacity: 1;
+                }
+
+                &:hover .fa-regular {
+                    opacity: 0;
+                }
+
+                .card__like:checked+.card__like .fa-solid {
+                    opacity: 1;
+                }
+
+                .card__like:checked+.card__like .fa-regular {
+                    opacity: 0;
+                }
             }
         }
     }

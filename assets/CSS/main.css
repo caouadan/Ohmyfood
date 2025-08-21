@@ -70,13 +70,30 @@ a {
   color: white;
   width: 218px;
   height: 50px;
-  background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   border-radius: 25px;
   margin-bottom: 57px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+}
+.main .location .btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: 25px;
+}
+.main .location .btn:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.5019607843);
+}
+.main .location .btn:hover::after {
+  opacity: 0.15;
 }
 .main .how {
   height: 440px;
@@ -211,6 +228,31 @@ a {
   border: none;
   font-size: 22px;
   color: #101010;
+  cursor: pointer;
+}
+.main .restaurants .card__like .fa-heart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: opacity 0.5s ease;
+}
+.main .restaurants .card__like .fa-regular {
+  opacity: 1;
+}
+.main .restaurants .card__like .fa-solid {
+  opacity: 0;
+}
+.main .restaurants .card__like:hover .fa-solid {
+  opacity: 1;
+}
+.main .restaurants .card__like:hover .fa-regular {
+  opacity: 0;
+}
+.main .restaurants .card__like .card__like:checked + .card__like .fa-solid {
+  opacity: 1;
+}
+.main .restaurants .card__like .card__like:checked + .card__like .fa-regular {
+  opacity: 0;
 }
 
 footer {
