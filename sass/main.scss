@@ -263,38 +263,25 @@ a {
                 font-size: 22px;
                 color: #101010;
                 cursor: pointer;
-
-                .fa-heart {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    transition: opacity 0.5s ease;
-                }
-
-                .fa-regular {
-                    opacity: 1;
-                }
-
-                .fa-solid {
-                    opacity: 0;
-                }
-
-                &:hover .fa-solid {
-                    opacity: 1;
-                }
-
-                &:hover .fa-regular {
-                    opacity: 0;
-                }
-
-                .card__like:checked+.card__like .fa-solid {
-                    opacity: 1;
-                }
-
-                .card__like:checked+.card__like .fa-regular {
-                    opacity: 0;
-                }
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
+
+            &__like .heart {
+                position: absolute;
+            }
+
+            &__like .fa-solid {
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            &__like .fa-regular {
+                opacity: 1;
+                transition: opacity 0.3s ease;
+            }
+
         }
     }
 
