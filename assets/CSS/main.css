@@ -78,7 +78,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.5s ease;
 }
 .main .location .btn::after {
   content: "";
@@ -209,11 +209,12 @@ a {
 }
 .main .restaurants .card__content {
   height: 77px;
-  padding: 0 0 0 13px;
+  padding: 0 25px 0 13px;
   background-color: white;
   display: flex;
   align-items: center;
   color: black;
+  justify-content: space-between;
 }
 .main .restaurants .card__text {
   display: flex;
@@ -221,38 +222,51 @@ a {
   gap: 5px;
 }
 .main .restaurants .card__like {
+  position: relative;
+  width: 23px;
+  height: 21px;
+}
+.main .restaurants .card__like-input {
   position: absolute;
-  bottom: 33px;
-  right: 25px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  color: #101010;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.main .restaurants .card__like-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
-.main .restaurants .card__like .fa-heart {
+.main .restaurants .card__like__icon {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  transition: opacity 0.5s ease;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease;
 }
-.main .restaurants .card__like .fa-regular {
+.main .restaurants .card__like__icon--empty {
   opacity: 1;
 }
-.main .restaurants .card__like .fa-solid {
+.main .restaurants .card__like__icon--filled {
   opacity: 0;
 }
-.main .restaurants .card__like:hover .fa-solid {
+.main .restaurants .card__like-input:hover + .card__like-label .card__like__icon--empty {
+  opacity: 0;
+}
+.main .restaurants .card__like-input:hover + .card__like-label .card__like__icon--filled {
   opacity: 1;
 }
-.main .restaurants .card__like:hover .fa-regular {
+.main .restaurants .card__like-input:checked + .card__like-label .card__like__icon--empty {
   opacity: 0;
 }
-.main .restaurants .card__like .card__like:checked + .card__like .fa-solid {
+.main .restaurants .card__like-input:checked + .card__like-label .card__like__icon--filled {
   opacity: 1;
-}
-.main .restaurants .card__like .card__like:checked + .card__like .fa-regular {
-  opacity: 0;
 }
 
 footer {
