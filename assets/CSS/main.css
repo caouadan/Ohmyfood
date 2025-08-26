@@ -426,7 +426,6 @@ footer ul a.without-icon {
   html .main .restaurants .all-cards .card {
     width: 100%;
     max-width: 490px;
-    gap: 20px;
   }
   html .main footer {
     display: flex;
