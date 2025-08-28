@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Mobile par défaut (moins de 1080px) */
+/* HOMEPAGE Mobile par défaut (moins de 1080px) */
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -30,13 +30,13 @@ a {
   background-color: rgba(255, 255, 255, 0.9);
   color: #353535;
   inset: 0;
-  z-index: 3;
+  z-index: 100;
   opacity: 1;
   font-size: 24px;
-  animation: out 1s linear forwards;
+  animation: fadeout 1s linear forwards;
   animation-delay: 2s;
 }
-@keyframes out {
+@keyframes fadeout {
   0% {
     opacity: 1;
     visibility: visible;
@@ -115,12 +115,12 @@ a {
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   border-radius: 25px;
-  margin-bottom: 57px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   transition: box-shadow 0.5s ease;
+  margin-bottom: 57px;
 }
 .main .location .btn::after {
   content: "";
@@ -225,6 +225,11 @@ a {
   position: relative;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
+.main .restaurants .card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
 .main .restaurants .card__image {
   height: 174px;
   position: relative;
@@ -276,7 +281,7 @@ a {
   height: 100%;
   margin: 0;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 .main .restaurants .card__like-label {
   position: absolute;
@@ -354,7 +359,7 @@ footer ul a.without-icon {
   height: 19px;
 }
 
-/* Desktop (1080px et plus) */
+/* HOMEPAGE Desktop (1080px et plus) */
 @media (min-width: 1080px) {
   html {
     display: flex;
@@ -443,6 +448,286 @@ footer ul a.without-icon {
     flex-direction: row;
     gap: 7px;
     align-items: flex-end;
+  }
+}
+/* MENU RESTAURANT Mobile par défaut (moins de 1080px) */
+.menu-restaurant {
+  position: relative;
+  background-color: #F6F6F6;
+  width: 100%;
+  /* RESTAURANTS Desktop (1080px et plus) */
+}
+.menu-restaurant .header-logo {
+  display: flex;
+  height: 63px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: relative;
+}
+.menu-restaurant .header-logo .box-return {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-restaurant .header-logo .box-return .return {
+  color: #353535;
+}
+.menu-restaurant .header-logo img {
+  width: 197px;
+  height: 36px;
+}
+.menu-restaurant .profil-image {
+  height: 275px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu-restaurant .profil-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.menu-restaurant .menu__title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F6F6F6;
+  position: relative;
+  align-items: center;
+  padding: 32px 17px 0 17px;
+  border-radius: 32px 32px 0 0;
+  margin-top: -32px;
+}
+.menu-restaurant .menu__title h1 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+}
+.menu-restaurant .menu__title .card__like {
+  position: relative;
+  width: 23px;
+  height: 21px;
+  margin-right: 24px;
+}
+.menu-restaurant .menu__title .card__like-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+.menu-restaurant .menu__title .card__like-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.menu-restaurant .menu__title .card__like__icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease;
+}
+.menu-restaurant .menu__title .card__like__icon--empty {
+  opacity: 1;
+}
+.menu-restaurant .menu__title .card__like__icon--filled {
+  opacity: 0;
+}
+.menu-restaurant .menu__title .card__like-input:hover + .card__like-label .card__like__icon--empty {
+  opacity: 0;
+}
+.menu-restaurant .menu__title .card__like-input:hover + .card__like-label .card__like__icon--filled {
+  opacity: 1;
+}
+.menu-restaurant .menu__title .card__like-input:checked + .card__like-label .card__like__icon--empty {
+  opacity: 0;
+}
+.menu-restaurant .menu__title .card__like-input:checked + .card__like-label .card__like__icon--filled {
+  opacity: 1;
+}
+.menu-restaurant .menu__foods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-restaurant .menu .entrees {
+  opacity: 0;
+  animation: out 1s linear forwards;
+}
+@keyframes out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-restaurant .menu .plats {
+  opacity: 0;
+  animation: out 1s linear forwards;
+  animation-delay: 1s;
+}
+@keyframes out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-restaurant .menu .desserts {
+  opacity: 0;
+  animation: out 1s linear forwards;
+  animation-delay: 2s;
+}
+@keyframes out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-restaurant .menu__partition {
+  padding: 0 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu-restaurant .menu__partition h2 {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 10px;
+  position: relative;
+  margin-top: 40px;
+}
+.menu-restaurant .menu__partition h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
+  margin-top: 5px;
+}
+.menu-restaurant .menu__partition .card-menu {
+  width: 349px;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 0 15px;
+  overflow: hidden;
+}
+.menu-restaurant .menu__partition .card-menu .menu-input {
+  display: none;
+}
+.menu-restaurant .menu__partition .card-menu .menu-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+}
+.menu-restaurant .menu__partition .card-menu .menu-label .text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  transition: max-width 1s ease;
+}
+.menu-restaurant .menu__partition .card-menu .menu-label .text h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 500;
+}
+.menu-restaurant .menu__partition .card-menu .menu-label .text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu-restaurant .menu__partition .card-menu .selected {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  transition: right 1s ease;
+}
+.menu-restaurant .menu__partition .card-menu .selected .price {
+  padding-right: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 14px;
+}
+.menu-restaurant .menu__partition .menu-input:checked + .menu-label .selected {
+  right: 0;
+}
+.menu-restaurant .menu__partition .menu-input:checked + .menu-label .text {
+  max-width: calc(100% - 90px);
+}
+.menu-restaurant .menu__partition .menu-input:hover + .menu-label .selected {
+  right: 0;
+}
+.menu-restaurant .menu__partition .menu-input:hover + .menu-label .text {
+  max-width: calc(100% - 90px);
+}
+.menu-restaurant .menu .btn {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.5s ease;
+  margin: 40px 0;
+}
+.menu-restaurant .menu .btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: 25px;
+}
+.menu-restaurant .menu .btn:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.5019607843);
+}
+.menu-restaurant .menu .btn:hover::after {
+  opacity: 0.15;
+}
+@media (min-width: 1080px) {
+  .menu-restaurant .menu__title {
+    justify-content: center;
+    gap: 24px;
+  }
+  .menu-restaurant .menu__partition .card-menu {
+    width: 634px;
   }
 }
 
