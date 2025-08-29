@@ -29,12 +29,12 @@
         </div>
     </header>
 
-    <section class="profil">
+    <div class="profil">
         <div class="profil-image">
             <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                 alt="Photo du restaurant La palette du goût">
         </div>
-    </section>
+    </div>
 
     <section class="menu">
         <div class="menu__title">
@@ -56,11 +56,12 @@
                         <defs>
                             <linearGradient id="paint0_linear_25368_713" x1="11.5" y1="-5.45937" x2="3.93419"
                                 y2="27.993" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#9356DC" />
+                                <stop offset="0" stop-color="#9356DC" />
                                 <stop offset="1" stop-color="#FF79DA" />
                             </linearGradient>
                         </defs>
                     </svg>
+
                 </label>
             </div>
         </div>
@@ -74,11 +75,11 @@
                     <div class="card-menu">
                         <input type="checkbox" id="item1" class="menu-input">
                         <label for="item1" class="menu-label">
-                            <div class="text">
-                                <h3>Fricassée d'escargots</h3>
-                                <p>Au piment d'Espelette </p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Fricassée d'escargots</span>
+                                <span class="description-food">Au piment d'Espelette</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">25€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -89,18 +90,18 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 
                     <div class="card-menu">
                         <input type="checkbox" id="item2" class="menu-input">
                         <label for="item2" class="menu-label">
-                            <div class="text">
-                                <h3>Foie gras de canard mi-cuit</h3>
-                                <p>Et ses copeaux de truffe noire</p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Foie gras de canard mi-cuit</span>
+                                <span class="description-food">Et ses copeaux de truffe noire</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">35€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -111,18 +112,18 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 
                     <div class="card-menu">
                         <input type="checkbox" id="item3" class="menu-input">
                         <label for="item3" class="menu-label">
-                            <div class="text">
-                                <h3>Œuf au plat</h3>
-                                <p>Assaisonné à la truffe sur lit de caviar</p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Œuf au plat</span>
+                                <span class="description-food">Assaisonné à la truffe sur lit de caviar</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">20€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +134,7 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 
@@ -148,11 +149,11 @@
                     <div class="card-menu">
                         <input type="checkbox" id="item4" class="menu-input">
                         <label for="item4" class="menu-label">
-                            <div class="text">
-                                <h3>Filet de bœuf aux herbes</h3>
-                                <p>Accompagné de sa ribambelle de légumes</p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Filet de bœuf aux herbes</span>
+                                <span class="description-food">Accompagné de sa ribambelle de légumes</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">40€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -163,18 +164,18 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 
                     <div class="card-menu">
                         <input type="checkbox" id="item5" class="menu-input">
                         <label for="item5" class="menu-label">
-                            <div class="text">
-                                <h3>Parmentier de queue de bœuf</h3>
-                                <p>À la truffe noire sur sa purée de panais</p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Parmentier de queue de bœuf</span>
+                                <span class="description-food">À la truffe noire sur sa purée de panais</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">35€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -185,18 +186,18 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 
                     <div class="card-menu">
                         <input type="checkbox" id="item6" class="menu-input">
                         <label for="item6" class="menu-label">
-                            <div class="text">
-                                <h3>Filet de turbot</h3>
-                                <p>Aux agrumes</p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Filet de turbot</span>
+                                <span class="description-food">Aux agrumes</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">44€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -207,7 +208,7 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 
@@ -222,11 +223,11 @@
                     <div class="card-menu">
                         <input type="checkbox" id="item7" class="menu-input">
                         <label for="item7" class="menu-label">
-                            <div class="text">
-                                <h3>Paris-Brest</h3>
-                                <p>Revisité</p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Paris-Brest</span>
+                                <span class="description-food">Revisité</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">18€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -237,18 +238,18 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 
                     <div class="card-menu">
                         <input type="checkbox" id="item8" class="menu-input">
                         <label for="item8" class="menu-label">
-                            <div class="text">
-                                <h3>Macaron au chocolat d'exception</h3>
-                                <p>Et glace à la vanille de Madagascar</p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Macaron au chocolat d'exception</span>
+                                <span class="description-food">Et glace à la vanille de Madagascar</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">22€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -259,18 +260,18 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 
                     <div class="card-menu">
                         <input type="checkbox" id="item9" class="menu-input">
                         <label for="item9" class="menu-label">
-                            <div class="text">
-                                <h3>Mousse au chocolat</h3>
-                                <p>Au piment d'Espelette et à la truffe noire</p>
-                            </div>
-                            <div class="selected">
+                            <span class="text">
+                                <span class="name-food">Mousse au chocolat</span>
+                                <span class="description-food">Au piment d'Espelette et à la truffe noire</span>
+                            </span>
+                            <span class="selected">
                                 <span class="price">23€</span>
                                 <svg width="60" height="69" viewBox="0 0 60 69" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -281,7 +282,7 @@
                                         d="M40.0847 34.9656C40.0847 40.4884 35.6076 44.9656 30.0847 44.9656C24.5619 44.9656 20.0847 40.4884 20.0847 34.9656C20.0847 29.4427 24.5619 24.9656 30.0847 24.9656C35.6076 24.9656 40.0847 29.4427 40.0847 34.9656ZM28.928 40.2605L36.3474 32.8411C36.5993 32.5892 36.5993 32.1807 36.3474 31.9288L35.435 31.0164C35.1831 30.7644 34.7746 30.7644 34.5226 31.0164L28.4718 37.0671L25.6469 34.2421C25.3949 33.9902 24.9864 33.9902 24.7344 34.2421L23.8221 35.1545C23.5701 35.4065 23.5701 35.815 23.8221 36.0669L28.0156 40.2605C28.2676 40.5124 28.676 40.5124 28.928 40.2605Z"
                                         fill="white" />
                                 </svg>
-                            </div>
+                            </span>
                         </label>
                     </div>
 

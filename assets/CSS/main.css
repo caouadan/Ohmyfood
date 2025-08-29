@@ -359,49 +359,49 @@ footer ul a.without-icon {
   height: 19px;
 }
 
-/* HOMEPAGE Desktop (1080px et plus) */
+/* Media Desktop 1080px+ (Homepage et Menu) */
 @media (min-width: 1080px) {
   html {
     display: flex;
     justify-content: center;
   }
-  html .main .header-logo {
+  .main .header-logo {
     height: 96px;
   }
-  html .main .location {
+  .main .location {
     margin: 0;
     padding: 30px 0;
     display: flex;
     flex-direction: column;
     gap: 18px;
   }
-  html .main .location h1 {
+  .main .location h1 {
     margin: 0;
     width: auto;
     height: auto;
     font-size: 40px;
     font-weight: 700;
   }
-  html .main .location p {
+  .main .location p {
     margin: 0;
     width: auto;
     height: auto;
   }
-  html .main .location .btn {
+  .main .location .btn {
     margin: 0;
   }
-  html .main .how {
+  .main .how {
     height: auto;
     padding: 50px 0;
     display: flex;
     flex-direction: column;
     gap: 25px;
   }
-  html .main .how__title {
+  .main .how__title {
     margin: 0 auto;
     width: 1080px;
   }
-  html .main .how .how-to-do {
+  .main .how .how-to-do {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -409,42 +409,42 @@ footer ul a.without-icon {
     max-width: 1080px;
     width: 100%;
   }
-  html .main .how .how-to-do .step {
+  .main .how .how-to-do .step {
     margin: 0;
   }
-  html .main .restaurants {
+  .main .restaurants {
     display: flex;
     max-width: 1080px;
     margin: 0 auto;
     padding: 30px 0;
   }
-  html .main .restaurants h2 {
+  .main .restaurants h2 {
     margin: 0;
     width: 1080px;
   }
-  html .main .restaurants .all-cards {
+  .main .restaurants .all-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0;
     gap: 50px 100px;
   }
-  html .main .restaurants .all-cards .card {
+  .main .restaurants .all-cards .card {
     width: 100%;
     max-width: 490px;
   }
-  html .main footer {
+  .main footer {
     display: flex;
     flex-direction: row-reverse;
     height: 114px;
     padding: 0 25px 30px 0;
   }
-  html .main footer h4 {
+  .main footer h4 {
     display: flex;
     margin: 0;
     align-items: flex-end;
     padding-left: 16px;
   }
-  html .main footer ul {
+  .main footer ul {
     flex-direction: row;
     gap: 7px;
     align-items: flex-end;
@@ -455,7 +455,6 @@ footer ul a.without-icon {
   position: relative;
   background-color: #F6F6F6;
   width: 100%;
-  /* RESTAURANTS Desktop (1080px et plus) */
 }
 .menu-restaurant .header-logo {
   display: flex;
@@ -563,35 +562,17 @@ footer ul a.without-icon {
 }
 .menu-restaurant .menu .entrees {
   opacity: 0;
-  animation: out 1s linear forwards;
-}
-@keyframes out {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fade-in 1s linear forwards;
 }
 .menu-restaurant .menu .plats {
   opacity: 0;
-  animation: out 1s linear forwards;
-  animation-delay: 1s;
-}
-@keyframes out {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: fade-in 1s linear forwards 1s;
 }
 .menu-restaurant .menu .desserts {
   opacity: 0;
-  animation: out 1s linear forwards;
-  animation-delay: 2s;
+  animation: fade-in 1s linear forwards 2s;
 }
-@keyframes out {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -649,17 +630,17 @@ footer ul a.without-icon {
   min-width: 0;
   transition: max-width 1s ease;
 }
-.menu-restaurant .menu__partition .card-menu .menu-label .text h3 {
+.menu-restaurant .menu__partition .card-menu .menu-label .text .name-food,
+.menu-restaurant .menu__partition .card-menu .menu-label .text .description-food {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.menu-restaurant .menu__partition .card-menu .menu-label .text .name-food {
   font-size: 18px;
   font-weight: 500;
 }
-.menu-restaurant .menu__partition .card-menu .menu-label .text p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.menu-restaurant .menu__partition .card-menu .menu-label .text .description-food {
   font-size: 15px;
   font-weight: 300;
 }
