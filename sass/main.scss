@@ -123,7 +123,6 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     align-items: stretch;
 
     .loader {
@@ -235,18 +234,24 @@ a {
         height: 440px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         padding: 0 20px;
         background-color: white;
 
         &__title {
             margin-top: 48px;
             margin-bottom: 26px;
+            max-width: 490px;
+            min-width: 340px;
+            width: 100%;
         }
 
         .how-to-do {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
+            gap: 24px;
         }
 
         .step {
@@ -307,10 +312,15 @@ a {
     .restaurants {
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin: 0 20px;
 
         h2 {
             margin-top: 54px;
+            max-width: 490px;
+            min-width: 340px;
+            width: 100%;
+
         }
 
         .all-cards {
@@ -318,6 +328,7 @@ a {
             grid-template-columns: repeat(1, 1fr);
             justify-items: center;
             margin-bottom: 66px;
+            width: 100%;
         }
 
         .card {
@@ -486,7 +497,11 @@ footer {
 
             &__title {
                 margin: 0 auto;
-                width: 1080px;
+                width: 100%;
+                max-width: 1080px;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
             }
 
             .how-to-do {
@@ -511,7 +526,11 @@ footer {
 
             h2 {
                 margin: 0;
-                width: 1080px;
+                width: 100%;
+                max-width: 1080px;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
             }
 
             .all-cards {
@@ -553,8 +572,8 @@ footer {
 .menu-restaurant {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: $light-gray;
+    align-items: stretch;
+    background-color: white;
     width: 100%;
 
     .header-logo {
@@ -600,15 +619,25 @@ footer {
     }
 
     .menu {
+        padding-top: 32px;
+        border-radius: 40px 40px 0 0;
+        margin-top: -32px;
+        background-color: $light-gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1055px;
+        margin-left: auto;
+        margin-right: auto;
+
         &__title {
             display: flex;
             justify-content: space-between;
             background-color: $light-gray;
             position: relative;
             align-items: center;
-            padding: 32px 17px 0 17px;
-            border-radius: 40px 40px 0 0;
-            margin-top: -32px;
+            gap: 24px;
 
             h1 {
                 font-family: 'Shrikhand';
@@ -618,7 +647,6 @@ footer {
 
             .card__like {
                 @include like;
-                margin-right: 24px;
             }
         }
 
@@ -626,6 +654,8 @@ footer {
             display: flex;
             flex-direction: column;
             align-items: center;
+            max-width: 634px;
+            width: 100%;
         }
 
         .entrees {
@@ -764,7 +794,7 @@ footer {
             }
 
             .menu-input:checked+.menu-label .text {
-                max-width: calc(100% - 90px);
+                max-width: calc(100% - 120px);
             }
 
             .menu-input:hover+.menu-label .selected {
@@ -772,7 +802,7 @@ footer {
             }
 
             .menu-input:hover+.menu-label .text {
-                max-width: calc(100% - 90px);
+                max-width: calc(100% - 120px);
             }
         }
 
@@ -785,7 +815,12 @@ footer {
     /* MENU RESTAURANT Desktop (plus de 1080px) */
 
     @media (min-width: 1080px) {
+
         .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             &__title {
                 justify-content: center;
                 gap: 24px;

@@ -21,7 +21,6 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   align-items: stretch;
 }
 .main .loader {
@@ -148,17 +147,23 @@ a {
   height: 440px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0 20px;
   background-color: white;
 }
 .main .how__title {
   margin-top: 48px;
   margin-bottom: 26px;
+  max-width: 490px;
+  min-width: 340px;
+  width: 100%;
 }
 .main .how .how-to-do {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  gap: 24px;
 }
 .main .how .step {
   display: flex;
@@ -211,16 +216,21 @@ a {
 .main .restaurants {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 20px;
 }
 .main .restaurants h2 {
   margin-top: 54px;
+  max-width: 490px;
+  min-width: 340px;
+  width: 100%;
 }
 .main .restaurants .all-cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
   margin-bottom: 66px;
+  width: 100%;
 }
 .main .restaurants .card {
   display: flex;
@@ -410,7 +420,11 @@ footer ul a.without-icon {
   }
   .main .how__title {
     margin: 0 auto;
-    width: 1080px;
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
   .main .how .how-to-do {
     display: flex;
@@ -431,7 +445,11 @@ footer ul a.without-icon {
   }
   .main .restaurants h2 {
     margin: 0;
-    width: 1080px;
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
   .main .restaurants .all-cards {
     display: grid;
@@ -465,8 +483,8 @@ footer ul a.without-icon {
 .menu-restaurant {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: #F6F6F6;
+  align-items: stretch;
+  background-color: white;
   width: 100%;
   /* MENU RESTAURANT Desktop (plus de 1080px) */
 }
@@ -506,15 +524,26 @@ footer ul a.without-icon {
   object-fit: cover;
   display: block;
 }
+.menu-restaurant .menu {
+  padding-top: 32px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -32px;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1055px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .menu-restaurant .menu__title {
   display: flex;
   justify-content: space-between;
   background-color: #F6F6F6;
   position: relative;
   align-items: center;
-  padding: 32px 17px 0 17px;
-  border-radius: 40px 40px 0 0;
-  margin-top: -32px;
+  gap: 24px;
 }
 .menu-restaurant .menu__title h1 {
   font-family: "Shrikhand";
@@ -525,7 +554,6 @@ footer ul a.without-icon {
   position: relative;
   width: 23px;
   height: 21px;
-  margin-right: 24px;
 }
 .menu-restaurant .menu__title .card__like-input {
   position: absolute;
@@ -573,6 +601,8 @@ footer ul a.without-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 634px;
+  width: 100%;
 }
 .menu-restaurant .menu .entrees {
   display: flex;
@@ -693,13 +723,13 @@ footer ul a.without-icon {
   right: 0;
 }
 .menu-restaurant .menu__partition .menu-input:checked + .menu-label .text {
-  max-width: calc(100% - 90px);
+  max-width: calc(100% - 120px);
 }
 .menu-restaurant .menu__partition .menu-input:hover + .menu-label .selected {
   right: 0;
 }
 .menu-restaurant .menu__partition .menu-input:hover + .menu-label .text {
-  max-width: calc(100% - 90px);
+  max-width: calc(100% - 120px);
 }
 .menu-restaurant .menu .btn {
   font-size: 16px;
@@ -734,6 +764,11 @@ footer ul a.without-icon {
   opacity: 0.15;
 }
 @media (min-width: 1080px) {
+  .menu-restaurant .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .menu-restaurant .menu__title {
     justify-content: center;
     gap: 24px;
