@@ -241,7 +241,7 @@ a {
         &__title {
             margin-top: 48px;
             margin-bottom: 26px;
-            max-width: 490px;
+            max-width: 100%;
             min-width: 340px;
             width: 100%;
         }
@@ -261,20 +261,28 @@ a {
             margin-bottom: 25px;
             align-items: center;
             width: 100%;
-            max-width: 490px;
+            max-width: 100%;
             min-width: 335px;
 
             &__content {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
+                align-items: center;
                 height: 72px;
                 width: 100%;
                 background-color: $light-gray;
                 box-shadow: 0px 4px 15px 0px #00000026;
-                align-items: center;
                 border-radius: 20px;
                 margin-left: 12px;
+                padding: 0 15px;
+
+                &:hover {
+                    .step__icon {
+                        color: $primary-color;
+                        transition: color 1s ease;
+                    }
+                }
             }
 
             &__number {
@@ -295,18 +303,14 @@ a {
 
             &__icon {
                 color: #7E7E7E;
-
-                &--purple {
-                    color: $primary-color;
-                }
             }
 
             &__text {
                 font-size: 16px;
                 font-weight: 500;
-                width: 211px;
             }
         }
+
     }
 
     .restaurants {
@@ -317,7 +321,7 @@ a {
 
         h2 {
             margin-top: 54px;
-            max-width: 490px;
+            max-width: 100%;
             min-width: 340px;
             width: 100%;
 
@@ -334,7 +338,7 @@ a {
         .card {
             display: flex;
             flex-direction: column;
-            max-width: 490px;
+            max-width: 100%;
             min-width: 340px;
             width: 100%;
             height: 251px;
@@ -450,6 +454,79 @@ footer {
     }
 }
 
+/* HOMEPAGE tablet (entre 768px et 1079px) */
+@media (min-width: 768px) and (max-width: 1079px) {
+    .main {
+
+        .location {
+            margin: 0;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+
+            h1 {
+                margin: 0;
+                width: auto;
+                height: auto;
+            }
+
+            p {
+                margin: 0;
+                width: auto;
+                height: auto;
+            }
+
+            .btn {
+                margin: 0;
+            }
+        }
+
+        .how {
+            height: auto;
+            padding: 50px 20px;
+
+            &__title {
+                margin: 0 0 25px 0;
+            }
+
+            .how-to-do {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                gap: 24px;
+
+                .step {
+                    min-width: 0;
+                    margin: 0;
+
+                }
+            }
+
+        }
+
+        .restaurants {
+            margin: 30px 20px;
+            height: auto;
+
+            h2 {
+                margin: 0 0 18px 0;
+            }
+
+            .all-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+                margin: 0;
+            }
+
+            .card {
+                max-width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
 /* HOMEPAGE Desktop (plus de 1080px) */
 @media (min-width: 1080px) {
     html {
@@ -490,10 +567,9 @@ footer {
 
         .how {
             height: auto;
-            padding: 50px 0;
+            padding: 50px 20px;
             display: flex;
             flex-direction: column;
-            gap: 25px;
 
             &__title {
                 margin: 0 auto;
@@ -522,7 +598,7 @@ footer {
             display: flex;
             max-width: 1080px;
             margin: 0 auto;
-            padding: 30px 0;
+            padding: 30px 20px;
 
             h2 {
                 margin: 0;
@@ -750,7 +826,8 @@ footer {
                         flex-direction: column;
                         flex: 1;
                         min-width: 0;
-                        transition: max-width 1s ease;
+                        max-width: 100%;
+                        transition: max-width 2s ease;
                         padding: 0 15px;
 
                         .name-food,
@@ -795,6 +872,7 @@ footer {
 
             .menu-input:checked+.menu-label .text {
                 max-width: calc(100% - 120px);
+                transition: max-width 0.5s ease;
             }
 
             .menu-input:hover+.menu-label .selected {
@@ -803,6 +881,7 @@ footer {
 
             .menu-input:hover+.menu-label .text {
                 max-width: calc(100% - 120px);
+                transition: max-width 0.5s ease;
             }
         }
 
