@@ -454,8 +454,8 @@ footer {
     }
 }
 
-/* HOMEPAGE tablet (entre 768px et 1079px) */
-@media (min-width: 768px) and (max-width: 1079px) {
+/* HOMEPAGE tablet (entre 768px et 1080px) */
+@media (min-width: 768px) and (max-width: 1080px) {
     .main {
 
         .location {
@@ -572,24 +572,18 @@ footer {
             flex-direction: column;
 
             &__title {
-                margin: 0 auto;
-                width: 100%;
-                max-width: 1080px;
-                margin-left: auto;
-                margin-right: auto;
-                display: flex;
+                margin: 0 0 25px 0;
             }
 
             .how-to-do {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
-                margin: 0 auto;
-                max-width: 1080px;
                 width: 100%;
+                gap: 24px;
 
                 .step {
                     margin: 0;
+                    min-width: 0;
                 }
             }
         }
